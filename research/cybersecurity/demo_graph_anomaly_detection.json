@@ -1,0 +1,61 @@
+{
+  "demonstration": "cybersecurity_graph_anomaly_detection",
+  "project_id": "30c06e7c-84fb-4589-929d-a9b20e61c3dc",
+  "hypothesis_id": "c812a834-d85d-468f-a773-4bcba1cbd466",
+  "experiment_id": "98a7074f-40f0-4cab-8153-c4cf31a1b541",
+  "run_status": "COMPLETED",
+  "isolation_level": "PROCESS_RESOURCE_LIMITED",
+  "conclusion_status": "SUPPORTED",
+  "conclusion_rationale": "p=0.0000 < alpha=0.05, effect size 12.457 (cohens_d) meets pre-registered threshold of 0.2 in the hypothesized direction.",
+  "statistics": {
+    "test_name": "welch_t_test",
+    "statistic": 27.853816688661215,
+    "p_value": 9.393798988638322e-11,
+    "effect_size": 12.456605509732915,
+    "effect_size_type": "cohens_d",
+    "ci_lower": 0.28891800984683635,
+    "ci_upper": 0.3303076969154337,
+    "ci_level": 0.95
+  },
+  "limitations": [
+    {
+      "category": "sample_limitation",
+      "description": "num_runs=10 is below the 30-run threshold generally recommended for a stable effect-size estimate; confidence intervals may be wide."
+    },
+    {
+      "category": "reproducibility_limitation",
+      "description": "No pinned dataset_version_id is recorded on this config; exact dataset state at execution time is not independently verifiable."
+    },
+    {
+      "category": "computational_limitation",
+      "description": "Experiment ran under a 1.0-CPU resource limit; results (especially latency/timing metrics) may not reflect production-scale hardware."
+    },
+    {
+      "category": "sandbox_isolation_limitation",
+      "description": "This run executed under the reduced-isolation process-tier sandbox (ADR-009), not the fully-isolated Docker tier - acceptable for this platform's own reviewed templates, but the resource/timing measurements are not cgroup-enforced on this platform."
+    }
+  ],
+  "next_experiments": [
+    {
+      "category": "test_generalization",
+      "description": "Result was SUPPORTED on this dataset/config. Test on a second, independent dataset to check whether the effect generalizes before treating it as a general finding."
+    },
+    {
+      "category": "test_robustness",
+      "description": "Repeat with a different random seed range and/or class-imbalance ratio to test whether the SUPPORTED conclusion is robust to those choices."
+    },
+    {
+      "category": "ablation",
+      "description": "Run an ablation removing one component of the proposed method at a time to attribute the observed effect to a specific mechanism rather than the method as a whole."
+    }
+  ],
+  "quality_check_passed": true,
+  "critic_objections": [
+    {
+      "severity": "blocking",
+      "category": "dataset_quality",
+      "message": "No dataset is specified for this hypothesis."
+    }
+  ],
+  "generated_at_utc": "2026-09-11T18:13:33.099531+00:00"
+}

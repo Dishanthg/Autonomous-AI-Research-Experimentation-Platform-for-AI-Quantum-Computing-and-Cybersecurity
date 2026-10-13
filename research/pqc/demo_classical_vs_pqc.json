@@ -1,0 +1,45 @@
+{
+  "demonstration": "pqc_classical_vs_postquantum",
+  "pqc_available": false,
+  "status_note": "NOT_IMPLEMENTED: liboqs/oqs-python is not installed in this environment. Classical (RSA/ECDSA) results above are real measurements; no PQC numbers are reported or fabricated. Install liboqs + oqs-python to enable this arm.",
+  "classical_results": [
+    {
+      "scheme": "RSA-2048",
+      "operation": "keygen",
+      "mean_seconds": 0.11833512499993049,
+      "artifact_size_bytes": 294
+    },
+    {
+      "scheme": "RSA-2048",
+      "operation": "sign",
+      "mean_seconds": 0.0015439300000252842,
+      "artifact_size_bytes": 256
+    },
+    {
+      "scheme": "RSA-2048",
+      "operation": "verify",
+      "mean_seconds": 9.764000001268868e-05,
+      "artifact_size_bytes": 294
+    },
+    {
+      "scheme": "ECDSA-secp256r1",
+      "operation": "keygen",
+      "mean_seconds": 4.451999998309475e-05,
+      "artifact_size_bytes": 91
+    },
+    {
+      "scheme": "ECDSA-secp256r1",
+      "operation": "sign",
+      "mean_seconds": 6.878500003040244e-05,
+      "artifact_size_bytes": 72
+    },
+    {
+      "scheme": "ECDSA-secp256r1",
+      "operation": "verify",
+      "mean_seconds": 0.00019131999997625825,
+      "artifact_size_bytes": 91
+    }
+  ],
+  "pqc_results": [],
+  "generated_at_utc": "2026-09-05T20:51:44.393474+00:00"
+}

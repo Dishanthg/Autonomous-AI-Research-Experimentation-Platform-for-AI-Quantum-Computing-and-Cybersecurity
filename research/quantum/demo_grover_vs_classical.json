@@ -1,0 +1,26 @@
+{
+  "demonstration": "quantum_grover_vs_classical",
+  "n_qubits": 4,
+  "search_space_size": 16,
+  "marked_state": "1011",
+  "grover_iterations": 3,
+  "classical_theoretical": {
+    "label": "THEORETICAL_COMPLEXITY",
+    "expected_queries": 8.5,
+    "worst_case_queries": 16
+  },
+  "quantum_simulated_ideal": {
+    "backend_type": "SIMULATOR",
+    "success_probability": 0.96375,
+    "circuit_depth": 14,
+    "execution_time_seconds": 0.05327963829040527
+  },
+  "quantum_simulated_noisy": {
+    "backend_type": "SIMULATOR",
+    "noise_model": "depolarizing_0.02",
+    "success_probability": 0.1365,
+    "error_rate": 0.8634999999999999
+  },
+  "note": "quantum_simulated_* are SIMULATOR results (Section 27/59 - no hardware wiring in this build); classical_theoretical is analytic complexity, not a measured value. These are three different kinds of number and must never be conflated.",
+  "generated_at_utc": "2026-09-05T20:51:43.805975+00:00"
+}

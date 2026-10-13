@@ -1,0 +1,205 @@
+{
+  "experiment_id": "f88e9566-e215-479a-96c6-a0b969f59ed0",
+  "config_version": 1,
+  "metric_comparison": [
+    {
+      "metric": "baseline.precision.mean",
+      "original": 0.5817079544618927,
+      "reproduced": 0.5817079544618927,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "baseline.precision.std",
+      "original": 0.03549783288374923,
+      "reproduced": 0.03549783288374923,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "baseline.recall.mean",
+      "original": 0.825,
+      "reproduced": 0.825,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "baseline.recall.std",
+      "original": 0.037582784708522984,
+      "reproduced": 0.037582784708522984,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "baseline.f1.mean",
+      "original": 0.6819688451498185,
+      "reproduced": 0.6819688451498185,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "baseline.f1.std",
+      "original": 0.03424378655074535,
+      "reproduced": 0.03424378655074535,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "baseline.pr_auc.mean",
+      "original": 0.809516063528957,
+      "reproduced": 0.809516063528957,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "baseline.pr_auc.std",
+      "original": 0.02706949842148889,
+      "reproduced": 0.02706949842148889,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "baseline.false_positive_rate.mean",
+      "original": 0.08125,
+      "reproduced": 0.08125,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "baseline.false_positive_rate.std",
+      "original": 0.010197221718810141,
+      "reproduced": 0.010197221718810141,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "baseline.latency_ms.mean",
+      "original": 1.1833332892905066e-06,
+      "reproduced": 1.066666643760982e-06,
+      "delta": -1.1666664552952466e-07,
+      "status": "MATCH"
+    },
+    {
+      "metric": "baseline.latency_ms.std",
+      "original": 1.9164656065230297e-07,
+      "reproduced": 3.513640637475419e-08,
+      "delta": -1.565101542775488e-07,
+      "status": "MATCH"
+    },
+    {
+      "metric": "baseline.train_time_ms.mean",
+      "original": 0.0,
+      "reproduced": 0.0,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "baseline.train_time_ms.std",
+      "original": 0.0,
+      "reproduced": 0.0,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "proposed.precision.mean",
+      "original": 0.9951194638694639,
+      "reproduced": 0.9951194638694639,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "proposed.precision.std",
+      "original": 0.00739332793836319,
+      "reproduced": 0.00739332793836319,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "proposed.recall.mean",
+      "original": 0.9875,
+      "reproduced": 0.9875,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "proposed.recall.std",
+      "original": 0.010758287072798385,
+      "reproduced": 0.010758287072798385,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "proposed.f1.mean",
+      "original": 0.9912718334338821,
+      "reproduced": 0.9912718334338821,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "proposed.f1.std",
+      "original": 0.007775893814823973,
+      "reproduced": 0.007775893814823973,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "proposed.pr_auc.mean",
+      "original": 0.9993751961096653,
+      "reproduced": 0.9993751961096653,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "proposed.pr_auc.std",
+      "original": 0.0008536002735370845,
+      "reproduced": 0.0008536002735370845,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "proposed.false_positive_rate.mean",
+      "original": 0.0006628787878787879,
+      "reproduced": 0.0006628787878787879,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "proposed.false_positive_rate.std",
+      "original": 0.0010031722589691101,
+      "reproduced": 0.0010031722589691101,
+      "delta": 0.0,
+      "status": "MATCH"
+    },
+    {
+      "metric": "proposed.latency_ms.mean",
+      "original": 1.2250001216452801e-06,
+      "reproduced": 1.124999890734519e-06,
+      "delta": -1.0000023091076104e-07,
+      "status": "MATCH"
+    },
+    {
+      "metric": "proposed.latency_ms.std",
+      "original": 1.1817821049580926e-07,
+      "reproduced": 4.3920378145210895e-08,
+      "delta": -7.425783235059837e-08,
+      "status": "MATCH"
+    },
+    {
+      "metric": "proposed.train_time_ms.mean",
+      "original": 2217.6375900000494,
+      "reproduced": 1101.5565299999253,
+      "delta": -1116.0810600001241,
+      "status": "DEVIATION"
+    },
+    {
+      "metric": "proposed.train_time_ms.std",
+      "original": 1093.102531119233,
+      "reproduced": 90.22049667018648,
+      "delta": -1002.8820344490465,
+      "status": "DEVIATION"
+    }
+  ],
+  "original_conclusion": "SUPPORTED",
+  "reproduced_conclusion": "SUPPORTED",
+  "conclusion_status_matches": true
+}

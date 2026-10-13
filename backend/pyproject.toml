@@ -1,0 +1,18 @@
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 110
+target-version = ["py312"]
+
+[tool.pytest.ini_options]
+testpaths = ["app/tests"]
+filterwarnings = [
+    "ignore::DeprecationWarning:qiskit.*",
+    "ignore::DeprecationWarning:neo4j.*",
+]

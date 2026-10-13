@@ -1,0 +1,64 @@
+[
+  {
+    "proposed": "random_forest",
+    "baseline": "logistic_regression",
+    "dataset": "breast_cancer",
+    "conclusion_status": "NOT_SUPPORTED",
+    "conclusion_rationale": "p=0.5276 >= alpha=0.05; result is not statistically significant.",
+    "statistics": {
+      "test_name": "welch_t_test",
+      "statistic": 0.6442135002577017,
+      "p_value": 0.527575502496567,
+      "effect_size": 0.28810103571985984,
+      "effect_size_type": "cohens_d",
+      "ci_lower": -0.006757115299957939,
+      "ci_upper": 0.013775702848676442,
+      "ci_level": 0.95
+    },
+    "limitations": [
+      {
+        "category": "sample_limitation",
+        "description": "num_runs=10 is below the 30-run threshold generally recommended for a stable effect-size estimate; confidence intervals may be wide."
+      },
+      {
+        "category": "computational_limitation",
+        "description": "Experiment ran under a 1.0-CPU resource limit; results (especially latency/timing metrics) may not reflect production-scale hardware."
+      },
+      {
+        "category": "sandbox_isolation_limitation",
+        "description": "This run executed under the reduced-isolation process-tier sandbox (ADR-009), not the fully-isolated Docker tier - acceptable for this platform's own reviewed templates, but the resource/timing measurements are not cgroup-enforced on this platform."
+      }
+    ]
+  },
+  {
+    "proposed": "xgboost",
+    "baseline": "logistic_regression",
+    "dataset": "breast_cancer",
+    "conclusion_status": "NOT_SUPPORTED",
+    "conclusion_rationale": "p=0.0665 >= alpha=0.05; result is not statistically significant.",
+    "statistics": {
+      "test_name": "welch_t_test",
+      "statistic": 1.963570128247717,
+      "p_value": 0.06650734494708666,
+      "effect_size": 0.878135257069975,
+      "effect_size_type": "cohens_d",
+      "ci_lower": 0.0003664078951407591,
+      "ci_upper": 0.018073691899065335,
+      "ci_level": 0.95
+    },
+    "limitations": [
+      {
+        "category": "sample_limitation",
+        "description": "num_runs=10 is below the 30-run threshold generally recommended for a stable effect-size estimate; confidence intervals may be wide."
+      },
+      {
+        "category": "computational_limitation",
+        "description": "Experiment ran under a 1.0-CPU resource limit; results (especially latency/timing metrics) may not reflect production-scale hardware."
+      },
+      {
+        "category": "sandbox_isolation_limitation",
+        "description": "This run executed under the reduced-isolation process-tier sandbox (ADR-009), not the fully-isolated Docker tier - acceptable for this platform's own reviewed templates, but the resource/timing measurements are not cgroup-enforced on this platform."
+      }
+    ]
+  }
+]

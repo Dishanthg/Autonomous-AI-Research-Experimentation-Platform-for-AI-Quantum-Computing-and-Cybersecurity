@@ -1,0 +1,37 @@
+{
+  "experiment": "Experiment 8: noise ablation (ideal vs noisy Grover)",
+  "n_qubits": 3,
+  "marked_state": "101",
+  "shots": 2048,
+  "noise_error_rate": 0.05,
+  "conclusion_status": "SUPPORTED",
+  "conclusion_rationale": "p=0.0000 < alpha=0.05, effect size -104.142 (cohens_d) meets pre-registered threshold of 0.05 in the hypothesized direction.",
+  "statistics": {
+    "test_name": "welch_t_test",
+    "statistic": -285.20337537993777,
+    "p_value": 2.6306147226617555e-46,
+    "effect_size": -104.14154811480363,
+    "effect_size_type": "cohens_d",
+    "ci_lower": -0.7571940104166667,
+    "ci_upper": -0.74719970703125,
+    "ci_level": 0.95
+  },
+  "limitations": [
+    {
+      "category": "sample_limitation",
+      "description": "num_runs=15 is below the 30-run threshold generally recommended for a stable effect-size estimate; confidence intervals may be wide."
+    },
+    {
+      "category": "reproducibility_limitation",
+      "description": "No pinned dataset_version_id is recorded on this config; exact dataset state at execution time is not independently verifiable."
+    },
+    {
+      "category": "computational_limitation",
+      "description": "Experiment ran under a 1.0-CPU resource limit; results (especially latency/timing metrics) may not reflect production-scale hardware."
+    },
+    {
+      "category": "measurement_limitation",
+      "description": "Only one evaluation metric was requested; a single metric can miss trade-offs (e.g. recall vs. false-positive rate) a multi-metric evaluation would surface."
+    }
+  ]
+}

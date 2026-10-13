@@ -1,0 +1,20 @@
+{
+  "ablation": "memory_duplicate_detection",
+  "scenario": "A second experiment proposes the exact same (domain, baseline, proposed) combination as an experiment that already exists in the project.",
+  "without_memory": {
+    "enabled": false,
+    "duplicate_detected": false,
+    "result": null
+  },
+  "with_memory": {
+    "enabled": true,
+    "duplicate_detected": true,
+    "result": {
+      "experiment_id": "5e6aa485-ff58-4486-a417-0a7ab7fd8c46",
+      "config_id": "8ba8852f-486d-453c-b94f-ef1505859ceb",
+      "status": "PLANNED"
+    }
+  },
+  "finding": "With memory enabled, the platform correctly identifies exp2 as a duplicate of exp1 (same domain/baseline/proposed) BEFORE it would be executed, pointing the researcher/agent back to the existing result. With memory disabled, no such warning is possible - the duplicate would proceed to execution undetected.",
+  "caveat": "n=1 project, one duplicate scenario. This demonstrates the mechanism works as designed; it is not a statistical claim about duplicate-experiment rates across many researchers/projects (that would require Section 35's full human-subjects-style ablation, not run here)."
+}

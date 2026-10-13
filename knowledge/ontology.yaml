@@ -1,0 +1,51 @@
+# Research Knowledge Graph ontology (Section 11/K).
+# This is the source-of-truth schema description; backend/app/services/
+# knowledge_graph/schema.py implements the constraints and write helpers
+# for exactly these node/edge types. Keep the two in sync by hand - there
+# is no code generation from this file (yet; see future_research).
+
+nodes:
+  Paper:
+    keyed_by: id            # Postgres papers.id (UUID string)
+    properties: [title, year]
+  Author:
+    keyed_by: name
+  Method:
+    keyed_by: name
+    properties: [description]
+  Algorithm:
+    keyed_by: name
+  Dataset:
+    keyed_by: name
+  ResearchQuestion:
+    keyed_by: id             # Postgres research_questions.id
+  Hypothesis:
+    keyed_by: id             # Postgres hypotheses.id
+  Experiment:
+    keyed_by: id             # Postgres experiments.id
+  Result:
+    keyed_by: id             # Postgres results.id
+  Limitation:
+    keyed_by: id             # Postgres limitations.id
+  ResearchGap:
+    keyed_by: id             # Postgres research_gaps.id
+
+edges:
+  - { from: Paper, type: USES, to: Method }
+  - { from: Paper, type: USES, to: Dataset }
+  - { from: Paper, type: EVALUATES, to: Algorithm }
+  - { from: Paper, type: REPORTS, to: Result }
+  - { from: Paper, type: IDENTIFIES, to: Limitation }
+  - { from: Paper, type: PROPOSES, to: ResearchGap }   # "future work" -> gap
+  - { from: Experiment, type: TESTS, to: Hypothesis }
+  - { from: Hypothesis, type: ADDRESSES, to: ResearchGap }
+
+# Gap-detection queries implemented against this schema
+# (backend/app/services/knowledge_graph/gap_queries.py):
+gap_queries:
+  - name: find_sparse_method_dataset_pairs
+    detects: unexplored_combination_of_methods
+    logic: "Method<-USES-Paper-USES->Dataset pairs covered by <= N papers"
+  - name: find_methods_with_no_dataset_overlap
+    detects: missing_baseline
+    logic: "Method pairs that have never been evaluated on a common Dataset"

@@ -1,0 +1,15 @@
+# Prometheus scrape config for the ResearchMind-Q backend (Section 82).
+# Real target: backend/app/main.py wires prometheus-fastapi-instrumentator,
+# exposing GET /metrics in the standard text format - verified by
+# backend/app/tests/test_observability.py (no external Prometheus/Grafana
+# server needed to verify the app-side instrumentation).
+#
+# Usage: prometheus --config.file=infrastructure/prometheus.yml
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: "researchmind-q-backend"
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["localhost:8000"]

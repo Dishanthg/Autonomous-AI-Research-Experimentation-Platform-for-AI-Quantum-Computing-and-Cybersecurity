@@ -1,0 +1,50 @@
+{
+  "ablation": "critic_blocks_invalid_designs",
+  "scenario": "A hypothesis with no dataset/baseline/confounders and a zero minimum-effect-size threshold, paired with a config requesting zero num_runs=1 and metrics_requested=[].",
+  "critic_on": {
+    "hypothesis_objections": [
+      {
+        "severity": "blocking",
+        "category": "dataset_quality",
+        "message": "No dataset is specified for this hypothesis."
+      },
+      {
+        "severity": "major",
+        "category": "confounders",
+        "message": "No potential confounders were documented."
+      },
+      {
+        "severity": "blocking",
+        "category": "statistical_methodology",
+        "message": "Pre-registered decision rule has no minimum effect-size threshold - a purely p-value-based rule risks flagging trivial effects as SUPPORTED."
+      },
+      {
+        "severity": "blocking",
+        "category": "baseline_selection",
+        "message": "No baseline method specified."
+      }
+    ],
+    "hypothesis_has_blocking": true,
+    "config_objections": [
+      {
+        "severity": "major",
+        "category": "sample_size",
+        "message": "num_runs=1 is too small to support a meaningful statistical test (t-test/Mann-Whitney need at least 3-5 per arm for a stable estimate)."
+      },
+      {
+        "severity": "blocking",
+        "category": "metric_selection",
+        "message": "No evaluation metrics requested."
+      }
+    ],
+    "config_has_blocking": true,
+    "would_be_approved": false
+  },
+  "critic_off_(hypothetical_if_check_were_removed)": {
+    "hypothesis_objections": [],
+    "config_objections": [],
+    "would_be_approved": true
+  },
+  "finding": "With the critic enabled, 4 hypothesis objection(s) and 2 config objection(s) were raised, and would_be_approved=False - this flawed design is correctly blocked before it could reach Gate 1 approval. Without the critic, nothing in the pipeline would have stopped it (would_be_approved=True).",
+  "caveat": "This demonstrates the critic's current checklist catches these specific, constructed flaws (n=1 constructed scenario). It is not a measurement of the critic's hit rate against a broad population of real, human-authored experimental designs."
+}

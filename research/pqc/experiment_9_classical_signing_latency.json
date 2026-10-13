@@ -1,0 +1,31 @@
+{
+  "experiment": "Experiment 9: RSA-2048 vs ECDSA-P256 signing latency",
+  "pqc_available_this_run": false,
+  "status_note": "VERIFIED: both classical schemes measured in this environment.",
+  "conclusion_status": "SUPPORTED",
+  "conclusion_rationale": "p=0.0000 < alpha=0.05, effect size -0.537 (cohens_d) meets pre-registered threshold of 0.5 in the hypothesized direction.",
+  "statistics": {
+    "test_name": "mann_whitney_u",
+    "statistic": 30.0,
+    "p_value": 5.560457972975886e-10,
+    "effect_size": -0.5370241111986361,
+    "effect_size_type": "cohens_d",
+    "ci_lower": -0.000592016999965684,
+    "ci_upper": 1.4487332688683338e-05,
+    "ci_level": 0.95
+  },
+  "limitations": [
+    {
+      "category": "reproducibility_limitation",
+      "description": "No pinned dataset_version_id is recorded on this config; exact dataset state at execution time is not independently verifiable."
+    },
+    {
+      "category": "computational_limitation",
+      "description": "Experiment ran under a 1.0-CPU resource limit; results (especially latency/timing metrics) may not reflect production-scale hardware."
+    },
+    {
+      "category": "measurement_limitation",
+      "description": "Only one evaluation metric was requested; a single metric can miss trade-offs (e.g. recall vs. false-positive rate) a multi-metric evaluation would surface."
+    }
+  ]
+}

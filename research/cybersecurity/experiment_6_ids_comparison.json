@@ -1,0 +1,62 @@
+[
+  {
+    "proposed": "logistic_regression",
+    "baseline": "rule_based",
+    "conclusion_status": "SUPPORTED",
+    "conclusion_rationale": "p=0.0000 < alpha=0.05, effect size 21.931 (cohens_d) meets pre-registered threshold of 0.2 in the hypothesized direction.",
+    "statistics": {
+      "test_name": "welch_t_test",
+      "statistic": 49.039952749921,
+      "p_value": 5.41378666577874e-13,
+      "effect_size": 21.93133359244022,
+      "effect_size_type": "cohens_d",
+      "ci_lower": 0.28183592345510056,
+      "ci_upper": 0.30392257271415796,
+      "ci_level": 0.95
+    },
+    "limitations": [
+      {
+        "category": "sample_limitation",
+        "description": "num_runs=10 is below the 30-run threshold generally recommended for a stable effect-size estimate; confidence intervals may be wide."
+      },
+      {
+        "category": "computational_limitation",
+        "description": "Experiment ran under a 1.0-CPU resource limit; results (especially latency/timing metrics) may not reflect production-scale hardware."
+      },
+      {
+        "category": "sandbox_isolation_limitation",
+        "description": "This run executed under the reduced-isolation process-tier sandbox (ADR-009), not the fully-isolated Docker tier - acceptable for this platform's own reviewed templates, but the resource/timing measurements are not cgroup-enforced on this platform."
+      }
+    ]
+  },
+  {
+    "proposed": "graph_enhanced_rf",
+    "baseline": "rule_based",
+    "conclusion_status": "SUPPORTED",
+    "conclusion_rationale": "p=0.0000 < alpha=0.05, effect size 21.034 (cohens_d) meets pre-registered threshold of 0.2 in the hypothesized direction.",
+    "statistics": {
+      "test_name": "welch_t_test",
+      "statistic": 47.0331659442146,
+      "p_value": 4.801917755039706e-14,
+      "effect_size": 21.033871249658393,
+      "effect_size_type": "cohens_d",
+      "ci_lower": 0.2790788421215336,
+      "ci_upper": 0.30218538179446164,
+      "ci_level": 0.95
+    },
+    "limitations": [
+      {
+        "category": "sample_limitation",
+        "description": "num_runs=10 is below the 30-run threshold generally recommended for a stable effect-size estimate; confidence intervals may be wide."
+      },
+      {
+        "category": "computational_limitation",
+        "description": "Experiment ran under a 1.0-CPU resource limit; results (especially latency/timing metrics) may not reflect production-scale hardware."
+      },
+      {
+        "category": "sandbox_isolation_limitation",
+        "description": "This run executed under the reduced-isolation process-tier sandbox (ADR-009), not the fully-isolated Docker tier - acceptable for this platform's own reviewed templates, but the resource/timing measurements are not cgroup-enforced on this platform."
+      }
+    ]
+  }
+]
